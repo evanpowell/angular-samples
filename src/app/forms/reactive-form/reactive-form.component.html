@@ -1,3 +1,107 @@
-<p>
-  reactive-form works!
-</p>
+<div class="container">
+
+  <h1>Reactive Form</h1>
+  <p class="mb-5">
+    With the reactive approach, the structure of the form is defined within the code (ie. the .ts file).
+    In this example, Angular's <code>FormBuilder</code> class is used to create a <code>FormGroup</code>.
+    The <code>FormGroup</code> can either represent an entire form, or a subset of form controls.
+  </p>
+  
+  <div class="card mb-5">
+
+    <div class="card-body">
+
+      <h4 class="card-title">Short Story Generator</h4>
+      <p class="mb-5">
+        Fill out the fields and click the 'Submit' button to fill in the blanks of a surprise story.
+        The submit button will only be enabled when all the fields are filled out.
+      </p>
+
+      <div class="card mb-5">
+
+    <div class="card-body">
+
+      <div class="card-title text-left mb-5">
+        <span class="h5 nametag-text">Short Story:</span>
+      </div>
+
+      <div class="card-text">
+        <span class="h1 nametag-text">{{ shortStoryText || 'submit the form below...' }}</span>
+      </div>
+
+    </div>
+
+  </div>
+
+      <form [formGroup]="shortStoryForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input 
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            formControlName="name"
+            name="name">
+        </div>
+
+        <div class="form-group">
+          <label for="verb">Verb</label>
+          <input
+            type="text"
+            class="form-control" 
+            id="verb"
+            required
+            formControlName="verb"
+            name="verb">
+        </div>
+
+        <div class="form-group">
+          <label for="adjective">Adjective</label>
+          <input
+            type="text"
+            class="form-control" 
+            id="adjective"
+            required
+            formControlName="adjective"
+            name="adjective">
+        </div>
+
+        <div class="form-group">
+          <label for="animal">Animal</label>
+          <input
+            type="text"
+            class="form-control" 
+            id="animal"
+            required
+            formControlName="animal"
+            name="animal">
+        </div>
+
+        <div class="form-group">
+          <label for="place">Place</label>
+          <input
+            type="text"
+            class="form-control" 
+            id="place"
+            required
+            formControlName="place"
+            name="place">
+        </div>
+
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!shortStoryForm.valid">
+          Submit
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
