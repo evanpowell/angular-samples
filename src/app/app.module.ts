@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GlobalNavComponent } from './global-nav/global-nav.component';
 import { HomeComponent } from './home/home.component';
 import { FormsComponent } from './forms/forms.component';
 import { TemplateFormComponent } from './forms/template-form/template-form.component';
@@ -14,6 +15,7 @@ import { ServiceSampleComponent } from './service-sample/service-sample.componen
 @NgModule({
   declarations: [
     AppComponent,
+    GlobalNavComponent,
     HomeComponent,
     FormsComponent,
     TemplateFormComponent,
