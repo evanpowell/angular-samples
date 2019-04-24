@@ -7,6 +7,7 @@ import { TemplateFormComponent } from './forms/template-form/template-form.compo
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { DirectiveSampleComponent } from './directive-sample/directive-sample.component';
 import { PipeSampleComponent } from './pipe-sample/pipe-sample.component';
+import { ServiceSampleComponent } from './service-sample/service-sample.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'pipes',
     component: PipeSampleComponent
+  },
+  {
+    path: 'services',
+    component: ServiceSampleComponent
   }
 ];
 
