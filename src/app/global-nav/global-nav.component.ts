@@ -25,7 +25,17 @@ export class GlobalNavComponent implements OnInit {
       },
       {
         title: 'Forms',
-        link: '/forms'
+        link: '/forms',
+        dropdownItems: [
+          {
+            title: 'Template',
+            link: '/template'
+          },
+          {
+            title: 'Reactive',
+            link: '/reactive'
+          }
+        ]
       },
       {
         title: 'Directives',
